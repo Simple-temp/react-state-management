@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Counter } from '../../App';
 
-const ProductDetails = (props) => {
-    const {Count} = props;
+const ProductDetails = () => {
+    const [Count] = useContext(Counter) ;
     return (
         <div>
            <h5>This is ProductDetails : {Count}</h5> 

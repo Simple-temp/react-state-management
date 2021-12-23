@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
+import { Counter } from '../../App';
 
-const About = (props) => {
-    const {Count, setCount} = props;
+const About = () => {
+    const [Count, setCount] = useContext( Counter ) ;
     return (
         <div>
             <h1>This is about : {Count}</h1>

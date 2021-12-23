@@ -1,12 +1,11 @@
 import React from 'react';
 import ProductDetails from '../ProductDetails/ProductDetails';
 
-const Product = (props) => {
-    const {Count} = props;
+const Product = () => {
     return (
         <div>
-            <h3>This is Product : {Count}</h3>
-            <ProductDetails Count={Count}></ProductDetails>
+            <h3>This is Product : </h3>
+            <ProductDetails></ProductDetails>
         </div>
     );
 };

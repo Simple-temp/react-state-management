@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Counter } from '../../App';
 import Product from '../Product/Product';
 import './Blog.css';
 
-const Blog = (props) => {
-    const {Count} = props;
+const Blog = () => {
+
+    const [Count] = useContext( Counter );
+
     return (
         <div className='blog'>
             <h1>this is blog : {Count}</h1>
-            <Product Count={Count}></Product>
+            <Product></Product>
         </div>
     );
 };
