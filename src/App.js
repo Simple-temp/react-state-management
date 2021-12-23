@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import About from './component/About/About';
+import Header from './component/Header/Header';
+import Blog from './component/Blog/Blog';
+import Product from './component/Product/Product';
+import ProductDetails from './component/ProductDetails/ProductDetails';
 
 function App() {
+  const [Count, setCount] = useState(0);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Header Count={Count}></Header>
+        <About Count={Count} setCount={setCount}></About>
+        <Blog Count={Count}></Blog>
+        <Product></Product>
+        <ProductDetails></ProductDetails>
     </div>
   );
 }
